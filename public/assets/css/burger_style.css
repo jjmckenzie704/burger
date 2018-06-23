@@ -1,0 +1,17 @@
+.list-group {
+    margin-bottom: 20px
+}
+
+body {
+    background-color: #abcdef
+}
+
+.devour {
+    float: right
+}
+
+img {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px
+}
