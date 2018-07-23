@@ -1,51 +1,66 @@
-<div class="text-center">
-    <img src="/assets/css/burger.jpg" alt="burger">
-    <h1>Eat-Da-Burger</h1>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div id="prepared">
-                <ul class="list-group list-group-flush">
-                    {{#each burgers}}
-                    {{#unless devoured}}
-                        <li class="list-group-item">
-                            {{id}}. {{burger_name}}
-                            <button class="devour btn btn-secondary" data-id="{{id}}" data-devoured="{{devoured}}">
-                            Devour It!
-                            </button>
-                        </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div id="devoured">
-                <ul class="list-group list-group-flush">
-                    {{#each burgers}}
-                    {{#if devoured}}
-                        <li class="list-group-item">
-                            {{id}}. {{burger_name}}
-                        </li>
-                    {{/if}}
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div> 
-</div>
+<div class="wrapper">
+    <div class="flex-item">
 
-<form>
-    <div class="container">
-        <div class="form-group">
-            <input placeholder="Type your burger name here" class="form-control" id="newBurger" burger="burger"></input>
-        </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-primary submit">Submit</button>
-        </div>
-        <div class="text-center">
-            <p>Enter a burger you want to eat, Click the "Submit" button.</p>
-        </div>
+    <header>
+        <h1 class="text-center title">Eat a <span class="bold">Burger</span></h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="prepared">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                            <li class="list-group-item">
+                                {{burger_name}}
+                                <button class="devour btn btn-secondary" data-id="{{id}}" data-devoured="{{devoured}}">
+                                Devour It!
+                                </button>
+                            </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <div id="devoured">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                        {{#if devoured}}
+                            <li class="list-group-item">
+                            {{burger_name}}
+                            </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <img src="/public/assets/img/hamburger-transparent-background.jpg" alt="burger" id="main-burger-img">
+
+                <form>
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input placeholder="Type your burger name here" class="form-control" id="newBurger" burger="burger"></input>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p>Enter a burger you want to eat, Click the "Submit" button.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div> 
+    </section>
+
+
+
     </div>
-</form>
+</div>
