@@ -11,7 +11,7 @@ if (process.env.JAWSDB_URL) {
     host: "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "m99nnkx903l8870k",
     password: "k1vc37duughak8gk",
-    database: "burgers_db"
+    database: "c7qh7ue8qondeb8c"
   })
 }
 
