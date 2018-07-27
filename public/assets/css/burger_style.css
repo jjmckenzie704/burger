@@ -24,7 +24,7 @@ body {
     margin: 10px;
     background-color: white;
     width: 75%;
-    height: auto;
+    height: 75%;
     background-repeat: no-repeat;
     background-position: calc(100% - -286px) 25%;
 }
@@ -35,22 +35,15 @@ header {
     margin-bottom: 8%;
 }
 
-section {
-    margin-bottom: 8%;
-}
-
-
-.title {
-    font-family: 'Encode Sans Semi Expanded', sans-serif;
-    margin-right: 30%;
-    font-size: 1.563em;
-}
-
 .bold {
     font-weight: 700;
 }
 
-
+#main-burger-img {
+    max-width: 125px;
+    height: auto;
+    width: 100%;
+}
 
 form {
     margin-top: 8%;
